@@ -31,6 +31,10 @@ void choose1()
     cin >> userChoice;
 }
 
+void calcReply()
+{
+}
+
 int main()
 {
     choose1();
@@ -49,14 +53,13 @@ int main()
 
         totalWeight = termTotal + summativeTotal + examTotal;
         weightAchieved += (termAchieved * termTotal / 100) + (summativeAchieved * summativeTotal / 100);
-
-        for (addition = 0; (weightAchieved / totalWeight) == (requiredGrade / examTotal); addition += 0.01)
+        for (int i = 0; i >= examTotal; i++)
         {
-            requiredGrade = addition;
+            addition += 1;
         }
 
-        requiredGrade = requiredGrade / examTotal * 100;
-        cout << "\n\nYou need a: " << requiredGrade << " Percent on the Exam\n";
+        requiredGrade = addition / examTotal * 100;
+        cout << "\n\nYou need a " << requiredGrade << " Percent on the Exam\n";
     }
     else if (userChoice == 2)
     {
