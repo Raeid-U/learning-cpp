@@ -15,9 +15,12 @@ float examAchieved;
 
 float totalWeight;
 float weightAchieved;
+float preExamGrade;
 
 double addition = 0;
 float requiredGrade;
+
+// Abandoned Project -- INCOMEPLETE
 
 void choose1()
 {
@@ -52,13 +55,11 @@ int main()
         cin >> placeholder;
 
         totalWeight = termTotal + summativeTotal + examTotal;
-        weightAchieved += (termAchieved * termTotal / 100) + (summativeAchieved * summativeTotal / 100);
-        for (int i = 0; i >= examTotal; i++)
-        {
-            addition += 1;
-        }
+        weightAchieved = weightAchieved + (termAchieved * termTotal / 100) + (summativeAchieved * summativeTotal / 100);
 
-        requiredGrade = addition / examTotal * 100;
+        preExamGrade = (weightAchieved / totalWeight);
+        cout << preExamGrade;
+
         cout << "\n\nYou need a " << requiredGrade << " Percent on the Exam\n";
     }
     else if (userChoice == 2)
