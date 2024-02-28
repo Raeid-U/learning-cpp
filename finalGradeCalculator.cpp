@@ -12,7 +12,7 @@ float totalWeight;
 
 float finalGrade;
 
-void obtain()
+void obtain_GradeCalc()
 {
     cout << "\nGrade Calculator Launched\n";
     cout << "\nHow many Assignments/Tests/Grades will you input?\n";
@@ -34,12 +34,12 @@ void obtain()
     }
 }
 
-void calculate()
+void calculate_GradeCalc()
 {
     finalGrade = 100 * (weightAchieved * (1 / totalWeight));
 }
 
-void reply()
+void reply_GradeCalc()
 {
     cout << "\n\n";
     cout << "### Calculating ###";
@@ -50,8 +50,8 @@ void reply()
 
 int main()
 {
-    obtain();
-    calculate();
-    reply();
+    obtain_GradeCalc();
+    calculate_GradeCalc();
+    reply_GradeCalc();
     return 0;
 }
