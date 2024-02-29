@@ -11,7 +11,7 @@ float placeHolderGPA;
 float averageGrade;
 float averageGPA;
 
-void obtain() // obtains courses and grades from user
+void obtain_FinalGPACalc() // obtains courses and grades from user
 {
     cout << "\n-----\n";
     cout << "\nHow many courses did you take?\n";
@@ -80,13 +80,13 @@ void obtain() // obtains courses and grades from user
     }
 }
 
-void calculate() // calculates averages
+void calculate_FinalGPACalc() // calculates averages
 {
     averageGrade = gradesTotal / numCourses;
     averageGPA = gpaTotal / numCourses;
 }
 
-void output() // returns averages to user
+void reply_FinalGPACalc() // returns averages to user
 {
     cout << "\nYour average for this semester was: " << averageGrade << "\n";
     cout << "Your unweighted GPA is: " << averageGPA << "\n";
@@ -98,9 +98,9 @@ int main()
     char reRun;
     do // allows user to rerun
     {
-        obtain();
-        calculate();
-        output();
+        obtain_FinalGPACalc();
+        calculate_FinalGPACalc();
+        reply_FinalGPACalc();
         cout << "Would you like to run again? (y/n):";
         cin >> reRun;
         cout << "\n-----\n";
